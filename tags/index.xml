@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Senio-RS</title>
+    <link>https://Senio-RS.com/tags/</link>
+    <description>Recent content in Tags on Senio-RS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 12 Aug 2024 14:15:05 +0700</lastBuildDate>
+    <atom:link href="https://Senio-RS.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feature</title>
+      <link>https://Senio-RS.com/tags/feature/</link>
+      <pubDate>Mon, 12 Aug 2024 14:15:05 +0700</pubDate>
+      <guid>https://Senio-RS.com/tags/feature/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

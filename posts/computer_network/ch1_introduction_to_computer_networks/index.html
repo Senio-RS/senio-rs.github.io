@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-tw" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 1: Introduction to Computer Networks | Senio-RS</title>
+
+<meta name="description" content="">
+      <link rel="stylesheet" href="/css/main.min.34298f58487d425b6027193972d69fed8a13cec21a900eead8effb07a17c95c3.css" integrity="sha256-NCmPWEh9QltgJxk5ctaf7YoTzsIakA7q2O/7B6F8lcM=" crossorigin="anonymous">
+
+<link rel="icon" type="image/svg+xml" href="https://Senio-RS.com/favicon.svg"> 
+<link rel="icon" type="image/x-icon" href="https://Senio-RS.com/favicon.ico"> 
+<link rel="icon" type="image/png" sizes="16x16" href="https://Senio-RS.com/favicon.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="https://Senio-RS.com/favicon-32.png"> 
+<link rel="icon" type="image/png" sizes="64x64" href="https://Senio-RS.com/favicon-64.png"> 
+
+</head>
+<body>
+  <header class="py-6 border-b"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col">
+	<div class="flex items-center">
+		<div class="flex items-center">
+			<button class="flex items-center space-x-2 rounded-full border py-1 pr-[5px] pl-3 group bg-zinc-100 hover:bg-zinc-200 toggle-button" data-target="menu-bar">
+				<svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+				</svg>
+				<span class="bg-blue-500 fill-white rounded-full p-1.5">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="group-hover:animate-spin bi bi-egg-fried fill-white" viewBox="0 0 16 16">
+						<path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+						<path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"></path>
+					</svg>
+				</span>
+			</button>
+			<div class="relative rounded-full py-1.5 px-6 bg-zinc-100 hover:bg-zinc-200 text-xl font-bold uppercase mx-2">
+				<h2><a class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto" href="https://Senio-RS.com/">Senio-RS</a></h2>
+			</div>
+		</div>
+		<div class="flex items-center ml-auto">
+			<button class="flex items-center rounded-full p-3 bg-zinc-100 hover:bg-zinc-200 toggle-button" data-target="search-bar">
+				<svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+					<path id="path1" class="transition-all ease-linear" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+					<path id="path2" class="transition-all ease-linear hidden" d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+  <nav id="menu-bar" class="block mt-3 close">
+    <ul class="flex items-center flex flex-nowrap whitespace-nowrap overflow-x-auto space-x-4">
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/">首頁</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/about/">關於我們</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/">分類</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">標籤</a>
+    </li>
+    </ul>
+  </nav>
+<div id="search-bar" class="block mt-3 close">
+	<form id="search" class="flex items-stretch">
+		<input class="w-full block px-6 py-2 rounded-l-full focus:outline-none border border-zinc-200" type="text" placeholder="Search...">
+		<button class="flex items-center px-7 py-2.5 rounded-r-full border border-zinc-200 ">
+			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="group-hover:animate-pulse" viewBox="0 0 16 16">
+				<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+			</svg>
+		</button>
+	</form>
+</div>
+</div></header>
+  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div id="breadcrumb" class="max-w-7xl mx-auto py-8">
+	<ul class="flex space-x-4 text-sm text-zinc-500">
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="https://Senio-RS.com/">Senio-RS</a>
+		</li>
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="https://Senio-RS.com/posts/">Posts</a>
+		</li>
+	</ul>
+</div><div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+
+  <article class="md:col-span-2 prose lg:prose-lg">
+
+    <header class="not-prose">
+      
+      <h1 id="title" class="text-4xl font-bold leading-normal">Chapter 1: Introduction to Computer Networks</h1>
+
+      <div id="lead" class="my-6">
+
+        <p class="font-bold"> </p>
+
+      </div>
+      
+      <div id="writer" class="flex items-center space-x-4">
+
+        <img class="w-12 h-12 bg-black rounded-full" src="https://Senio-RS.com/images/personal_image.JPG" alt="莊博丞 Eddie avatar" width="1367" height="1367">
+
+        <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+          
+          <li class="font-semibold my-2">莊博丞 Eddie</li>
+          
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2"><time datetime="2024-08-12T14:15:05&#43;07:00">August 12, 2024</time>
+          </li>
+
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
+            4 min read
+          </li>
+
+        </ul>
+
+      </div>
+      
+    </header>
+
+    <figure id="featureimage" class="rounded-xl aspect-video">
+            <img class="rounded-lg" src="https://Senio-RS.com/images/Computer_network/Ch1/cover_hu3ef89dffafdf2011dfbbc8a6096e2f33_20282_750x0_resize_box_3.png" alt="" width="750" height="422">
+        <figcaption class="text-center italic text-xs"></figcaption>
+
+    </figure>
+
+    <div id="content" class="mb-14">
+      <h2 id="1-internet">1. Internet</h2>
+<ul>
+<li><strong>“Nuts and Bolts” view</strong>:
+<ul>
+<li>Millions of connected devices (hosts = end systems)</li>
+<li>Using network applications</li>
+<li>Connected via communication links (fiber, copper, radio, satellite).</li>
+<li>Routers forward data packets.</li>
+</ul>
+</li>
+<li><strong>Service View</strong>:
+<ul>
+<li>Internet provides services to applications like the web, VoIP, email, e-commerce.</li>
+<li>Applications use Internet protocols (TCP, IP, HTTP, etc.).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-protocol-通訊協定">2. Protocol (通訊協定)</h2>
+<ul>
+<li>A set of rules for sending/receiving messages (e.g., TCP, IP).</li>
+<li>Human protocols：include phrases like &ldquo;What&rsquo;s the time?&rdquo; or &ldquo;I have a question.&rdquo;</li>
+<li>Network protocols：govern communication between machines.</li>
+<li>Protocols define format(Syntax and Semantics). order of msgs sent and received, and action taken on msg transmission.</li>
+<li>Internet Standards：<strong>IETF (Internet Engineering Task Force)</strong></li>
+</ul>
+<hr>
+<h2 id="3-network-edge">3. Network Edge</h2>
+<ul>
+<li><strong>End Systems (Hosts)</strong>: Clients and servers running applications (e.g., web, email).</li>
+<li><strong>Client-Server Model</strong>: Clients request services from always-on servers.</li>
+<li><strong>Peer-to-Peer Model (P2P)</strong>: Minimal (or no) use of dedicated servers (e.g., Skype, BitTorrent).</li>
+</ul>
+<h3 id="31-network-edge-data-transfer">3.1 Network Edge Data Transfer</h3>
+<ul>
+<li><strong>TCP (Transmission Control Protocol)</strong>: Provides reliable, in-order data transfer, flow control, and congestion control.
+<ul>
+<li><strong>Flow control:</strong> Sender won’t overwhelm receiver</li>
+<li><strong>Congestion control:</strong> Sender will slow down the sending rate when network congested</li>
+<li><strong>Examples:</strong> HTTP, FTP, SMTP(Email), Telnet(Remote Login)</li>
+</ul>
+</li>
+<li><strong>UDP (User Datagram Protocol)</strong>:
+<ul>
+<li><strong>Disadvantage but also an advantage</strong>
+<ul>
+<li>connectionless</li>
+<li>unreliable</li>
+<li>no flow control</li>
+<li>no congestion control</li>
+</ul>
+</li>
+<li><strong>Examples:</strong> Streaming media, DNS, Internet telephony, teleconferencing.</li>
+</ul>
+</li>
+</ul>
+<h3 id="32-access-network">3.2 Access Network</h3>
+<h4 id="dsldigital-subscriber-line">DSL(Digital Subscriber Line)</h4>
+<ul>
+<li>Single user single line</li>
+</ul>
+<h4 id="cable-network">Cable Network</h4>
+<ul>
+<li>Different channels transmitted in different frequency bands</li>
+<li><strong>Unlike DSL, which has dedicated access to central office</strong></li>
+</ul>
+<h4 id="wireless">Wireless</h4>
+<ul>
+<li>Wireless LANs (WIFI)</li>
+<li>Cellular</li>
+</ul>
+<h3 id="33-sending-packets">3.3 Sending Packets</h3>
+<ul>
+<li>Breaks into smaller chunks, known as <em>packets</em>, of length <em>L</em> bits</li>
+<li><strong>Transmission Rate (R)(bits/sec):</strong> transmits packet into access network.</li>
+<li><strong>Transmission Delay(sec):</strong> L(bits) / R(bits/sec)</li>
+</ul>
+<hr>
+<h2 id="4-network-core">4. Network Core</h2>
+<h3 id="41-packet-switching-封包交換">4.1 Packet Switching (封包交換)</h3>
+<ul>
+<li><strong>Small Packets:</strong> Breaks messages into smaller packets and forwards them through routers.</li>
+<li><strong>Store and Forward:</strong> entire packet must arrive at router before it can be transmitted on next link</li>
+<li><strong>Queueing delay, loss:</strong>
+<ul>
+<li>packets will queue, waited to be transmitted on link</li>
+<li>packets can be dropped(lost) if memory fills up</li>
+</ul>
+</li>
+</ul>
+<h3 id="42-circuit-switching-電路交換">4.2 Circuit Switching (電路交換)</h3>
+<ul>
+<li>Reserves end-to-end resources for a connection (e.g., in traditional telephone networks).</li>
+<li>為每個user保留傳輸線路</li>
+<li>FDM(分頻多工) vs TDM(分時多工)</li>
+</ul>
+<h3 id="43-packet-switching-vs-circuit-switching">4.3 Packet Switching V.S. Circuit Switching</h3>
+<ul>
+<li>網際網路目前主要採用「<strong>Packet Switching</strong>」作為主要的傳輸方式。</li>
+<li>情境：
+<ul>
+<li>總頻寬1Mb/s，每個User會使用100kb/s（active 10% of time）</li>
+<li><strong>Circuit Switching:</strong> 10 users</li>
+<li><strong>Packet Switching:</strong> with 35 users (probability &gt; 10 active at same time is less than .0004)</li>
+<li><strong>Conclusion:</strong> <em>Packet Switching allows more users to use network</em></li>
+</ul>
+</li>
+<li><strong>Excessive congestion possible: packet delay and loss</strong></li>
+</ul>
+<h3 id="44-internet-structure">4.4 Internet Structure</h3>
+<p>A network of networks, with ISPs(Internet service provider) connected at various levels.</p>
+<hr>
+<h2 id="5-delay-loss-and-throughput">5. Delay, Loss, and Throughput</h2>
+<h3 id="51-four-sources-of-packet-delay">5.1 Four sources of packet delay</h3>
+<ol>
+<li>Nodal Processing(節點處理)</li>
+<li>Queuing</li>
+<li>Transmission</li>
+<li>Propagation</li>
+</ol>
+<h3 id="52-trace-route-program">5.2 Trace route program</h3>
+<p>Provides delay measurement from source to router along end-end Internet path towards destination. For all <em>i:</em></p>
+<ul>
+<li>sends three packets(預防封包遺失) that will reach router <em>i</em> on path towards destination</li>
+<li>router <em>i</em> will return packets to sender</li>
+<li>sender times interval between transmission and reply.</li>
+<li>白話：我傳給你，你回傳給我，計算時間差</li>
+<li>可以用 <code>tracert &lt;IP&gt;</code>（Windows）、<code>traceroute &lt;IP&gt;</code>(Mac)來完成trace route</li>
+</ul>
+<h3 id="53-packet-loss">5.3 Packet Loss</h3>
+<ul>
+<li>Occurs when the buffer fills up, leading to dropped packets.</li>
+</ul>
+<h3 id="54-throughput流量">5.4 Throughput（流量）</h3>
+<ul>
+<li>The rate of data transfer between sender and receiver. The bottleneck link limits throughput.</li>
+<li>白話：資訊在網路流動的速度</li>
+<li>Different type of measuring throughput.
+<ul>
+<li><em><strong>instantaneous:</strong></em> rate at given point in time（極短的時間，但不是瞬時）</li>
+<li><em><strong>average:</strong></em> rate over long(er) period of time（一段時間）</li>
+</ul>
+</li>
+<li><strong>Bottleneck:</strong> a section of network transmission the determine the average throughput, usually the smallest one.
+<ul>
+<li>EX. Server → $R_s$ → $R_c$ → Client</li>
+<li>If $R_s$ &gt; $R_c$, then $R_c$ is the bottleneck.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="6-protocol-layers-and-service-models">6. Protocol Layers and Service Models:</h2>
+<ul>
+<li><strong>Internet Protocol Stack(實務)</strong>:
+<ol>
+<li><strong>Application</strong>: Supports network applications (e.g., FTP, HTTP).</li>
+<li><strong>Transport</strong>: Process-to-process data transfer (e.g., TCP, UDP).</li>
+<li><strong>Network</strong>: Routing of data from source to destination (e.g., IP).</li>
+<li><strong>Link</strong>: Data transfer between neighboring network elements (e.g., Ethernet, Wi-Fi).</li>
+<li><strong>Physical</strong>: Transmission of raw bits across the physical medium.</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p><strong>筆記整理</strong></p>
+<ul>
+<li>可以發現越上面的階層越接近我們日常可能會看到的領域</li>
+<li>從軟體層面→硬體層面</li>
+<li>EX. FTP→TCP→IP→Ethernet→Fiber Optic Cable</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>ISO/OSI Reference Model（理論）</strong>
+<ul>
+<li><strong>presentation:</strong> allow applications to interpret meaning of data, e.g., encryption, compression, machine-specific conventions</li>
+<li><em><strong>session:</strong></em> synchronization, checkpointing, recovery of data exchange</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="7-security">7. Security:</h2>
+<ul>
+<li><strong>Malware</strong>: Viruses, worms, spyware can infect hosts via the Internet.</li>
+<li><strong>Denial of Service (DoS) Attacks</strong>: Overwhelm servers or networks with traffic.</li>
+<li><strong>Packet Sniffing &amp; IP Spoofing</strong>: Methods for attackers to intercept or disguise data.</li>
+</ul>
+<hr>
+<h2 id="8-history">8. History:</h2>
+<ul>
+<li><strong>1960s</strong>: Early packet-switching principles developed.</li>
+<li><strong>1970s</strong>: ARPAnet created and expanded, introduction of protocols like NCP and early email.</li>
+<li><strong>1980s</strong>: Deployment of TCP/IP, creation of DNS, and proliferation of networks (CSnet, BITnet).</li>
+<li><strong>1990s</strong>: Commercialization of the Internet and the rise of the World Wide Web.</li>
+<li><strong>2000s</strong>: The emergence of online social networks, cloud services, and mobile devices.</li>
+<li><strong>Present</strong>: Billions of devices connected to the Internet, with increasing wireless broadband access and extensive cloud computing.</li>
+</ul>
+
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+
+      <li class="font-semibold my-4">Tags:</li>
+        <li ><a class="py-2 px-6 border rounded-full hover:bg-zinc-100 active:bg-zinc-300" href="/tags/feature/">Feature</a></li>
+    </ul>
+</div>
+
+    <footer id="content-footer" class="not-prose">
+
+
+
+      <div id="author-box" class="my-8 md:my-14 border p-8 bg-zinc-100 rounded-2xl">
+
+        <img class="w-20 h-20 rounded-full" src="/images/personal_image.JPG" alt="莊博丞 Eddie">
+
+        <h2 class="text-xl font-bold my-4"> 莊博丞 Eddie</h2>
+
+        <p class="mb-4">交大百川 資工核心、SenioRS站長、Project EDU創辦人兼任負責人。</p>
+
+        <ul class="flex flex-wrap space-x-4">
+          <li>
+            <a class="flex items-center decoration-auto hover:underline" href="https://facebook.com/chen950726" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg>
+              <span class="ml-2">Facebook</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="flex items-center decoration-auto hover:underline" href="https://instagram.com/chen950726" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+
+              </svg>
+              <span class="ml-2">Instagram</span>
+            </a>
+          </li>
+
+        </ul>
+        
+      </div>
+
+      <div id="related-post" class="">
+
+        <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Recommended for You</h2>
+      </div>
+
+    </footer>
+
+  </article>
+
+  
+  <aside class="md:col-span-1"><div class="lg:sticky lg:top-8"><div class="rounded-2xl p-4 bg-zinc-100 mb-10">
+    <p style="text-align:center"><strong>贊助頁面</strong></p>
+    <p style="text-align:center">目前尚無贊助廠商 QwQ</p>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3096540945532736"
+         crossorigin="anonymous"></script>
+
+    
+
+</div>
+<div class="space-y-6">
+
+		<h2 class="font-bold text-xl mb-8">相關文章</h2>
+
+		<article class="relative group flex flex-row">
+	<a class="insert-link" href="https://Senio-RS.com/posts/computer_network/ch1_introduction_to_computer_networks/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100"><img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://Senio-RS.com/images/Computer_network/Ch1/cover_hu3ef89dffafdf2011dfbbc8a6096e2f33_20282_250x250_crop_box_center_3.png" alt="Chapter 1: Introduction to Computer Networks" width="250" height="250">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">Chapter 1: Introduction to Computer Networks</h3>
+	</div>
+</article>
+		
+	</div>
+
+</div>
+</aside>
+
+</div>
+  
+</main>
+  <footer class="bg-zinc-100 py-10 md:py-14"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+
+  <div class="flex flex-wrap space-y-6 mb-4">
+
+    <div class="w-full md:w-3/5 flex flex-col space-y-4 md:pr-8 lg:pr-10">
+
+      <a class="flex items-center group" href="https://Senio-RS.com/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="mr-2 group-hover:animate-spin" viewBox="0 0 16 16">
+          <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          <path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
+        </svg>
+        
+        <span class="text-2xl font-semibold uppercase">Senio-RS</span>
+      </a>
+
+      <p class="font-semibold">
+        <br>
+      </p>
+
+
+    </div>
+
+    <div class="self-center flex flex-col w-full md:w-2/5">
+
+<ul id="social-media" class="flex items-center space-x-2">
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.facebook.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+				<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+			</svg>
+		</a>
+	</li>
+
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.github.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.instagram.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+			</svg>
+		</a>
+	</li>
+</ul>
+
+
+    </div>
+    
+  </div>
+
+  <div class="my-8">
+    <ul class="flex items-center space-x-4">
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/">首頁</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/about/">關於我們</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">分類</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">標籤</a></li>
+      
+    </ul>
+  </div>
+
+  <div class="border-t pt-4">
+
+    <p class="text-sm">Copyright © 2024. All rights reserved. <a href="https://insertapps.com/en/" target="_blank" rel="noopener">Senio-RS.com</a></p>
+
+  </div>
+  
+</div>
+</footer>
+      <script defer src="/js/insertoggle.474f9b0e08021c6519cff4e46df14ccf148285b2d3a23d6321d6e10f25c291fb.js" integrity="sha256-R0&#43;bDggCHGUZz/TkbfFMzxSChbLToj1jIdbhDyXCkfs=" crossorigin="anonymous"></script>
+</body>
+</html>

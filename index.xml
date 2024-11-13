@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Senio-RS</title>
+    <link>https://Senio-RS.com/</link>
+    <description>Recent content on Senio-RS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 12 Aug 2024 14:15:05 +0700</lastBuildDate>
+    <atom:link href="https://Senio-RS.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter 1: Introduction to Computer Networks</title>
+      <link>https://Senio-RS.com/posts/computer_network/ch1_introduction_to_computer_networks/</link>
+      <pubDate>Mon, 12 Aug 2024 14:15:05 +0700</pubDate>
+      <guid>https://Senio-RS.com/posts/computer_network/ch1_introduction_to_computer_networks/</guid>
+      <description>1. Internet “Nuts and Bolts” view: Millions of connected devices (hosts = end systems) Using network applications Connected via communication links (fiber, copper, radio, satellite).</description>
+    </item>
+    <item>
+      <title>關於我們</title>
+      <link>https://Senio-RS.com/about/</link>
+      <pubDate>Fri, 06 Oct 2023 20:37:29 +0700</pubDate>
+      <guid>https://Senio-RS.com/about/</guid>
+      <description>Senio-RS.com是由就讀於國立陽明交通大學 百川學士學位學程 資訊工程核心的莊博丞一手建立。希望透過此平台帶給對相關領域有興趣的同學一個學習的參考。&#xA;平台使命 Our mission is to inspire, educate, and spark curiosity about space and astronomy. We aim to make the wonders of the cosmos accessible to everyone, from seasoned astronomers to those taking their first steps into the world of stargazing.</description>
+    </item>
+  </channel>
+</rss>
